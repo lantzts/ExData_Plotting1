@@ -30,6 +30,7 @@ data$datim <- dmy_hms(with(data, paste(Date, Time)))
 
 
 png(file = "plot2.png", width = 480, height = 480, units = "px")
+par(bg=NA)
 with(data, plot(Global_active_power~datim, type = "l",
                 ylab = "Global Active Power (kilowatts)", xlab = NA))
 dev.off()

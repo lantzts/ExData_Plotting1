@@ -28,6 +28,7 @@ data <- read.table(filename, sep = ";", skip = sod - 1, nrows = lod,
 colnames(data) <- unlist(header)
 
 png(file = "plot1.png", width = 480, height = 480, units = "px")
+par(bg=NA)
 with(data, hist(Global_active_power, col = cbPalette[2],
                 xlab = "Global Active Power (kilowatts)",
                 main = "Global Active Power"))

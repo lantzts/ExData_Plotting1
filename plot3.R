@@ -30,6 +30,7 @@ data$datim <- dmy_hms(with(data, paste(Date, Time)))
 
 
 png(file = "plot3.png", width = 480, height = 480, units = "px")
+par(bg=NA)
 
 with(data, {
         plot(Sub_metering_1~datim, type = "n",
